@@ -21,6 +21,7 @@ public class HelloWorld extends AppCompatActivity {
 
     Button btnSayHello;
     TextView txtOutput;
+    Button btnSaySomething;
 
 
     @Override
@@ -31,6 +32,9 @@ public class HelloWorld extends AppCompatActivity {
         btnSayHello = (Button)findViewById(R.id.btnSayHello);
         txtOutput = (TextView)findViewById(R.id.txtOutput);
 
+        btnSaySomething = (Button)findViewById(R.id.btnSaySomething);
+
+
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
@@ -39,6 +43,11 @@ public class HelloWorld extends AppCompatActivity {
     public void sayHello(View vw)
     {
         txtOutput.setText(R.string.strMessage);
+    }
+
+    public void saySomething(View vw)
+    {
+        txtOutput.setText(R.string.strSomething);
     }
 
     @Override
